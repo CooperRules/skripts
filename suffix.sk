@@ -1,0 +1,24 @@
+on chat:
+    {suffix::%uuid of player%} is set
+    set {_l::*} to split chat format at "[player]"
+    set {_l2::*} to split {_l::1} at ""
+    set {_c} to "&r"
+    loop {_l2::*}:
+        set {_i} to loop-index parsed as a integer
+        set {_i2} to {_i} + 1
+        loop-value is "&" or "§"
+        set {_c} to colored "&%{_l2::%{_i2}%}%"
+    replace every "[player]" in chat format with "[player] %{suffix::%uuid of player%}%%{_c}%"
+   
+command /suffix <text>:
+    permission: suffix.set
+    trigger:
+        if arg-1 is "off":
+            delete {suffix::%uuid of player%}
+            message "&aSuffix deleted!"
+        else if arg-1 contains " ":
+            message "&cYou're suffix can't have spaces!"
+            stop
+        else:
+            set {suffix::%uuid of player%} to colored arg-1
+            message "&aSuffix set!"

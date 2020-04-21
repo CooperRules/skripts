@@ -1,0 +1,28 @@
+command /buywand [<text>]:
+	permission: buy.wand
+	permission message: "&cYou need to be a donater before buying a sellwand."
+	trigger:
+		if arg-1 is not set:
+			message "&cYou need to choose a sell wand to buy."
+			message "&bBasic Wand &e(&710m&e)"
+			message "&bRegular Wand &e(&720m&e)"
+			message "&bEPIC Wand &e(&750m&e)"
+		if arg-1 is "basic":
+			if player's balance is greater or equal to 10000000:
+				execute console command "sellwands give %player% default"
+				remove 10000000 from player's balance
+				stop
+			else:
+				message "&cYou do not have enough money."
+		if arg-1 is "regular":
+			if player's balance is greater or equal to 20000000:
+				execute console command "sellwands give %player% regular"
+				remove 20000000 from player's balance
+				stop
+			else:
+				message "&cYou do not have enough money."
+		if arg-1 is "epic":
+			if player's balance is greater or equal to 50000000:
+				execute console command "sellwands give %player% epic"
+				remove 50000000 from player's balance
+				stop

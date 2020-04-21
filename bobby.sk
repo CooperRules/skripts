@@ -1,0 +1,21 @@
+command /bobby:
+
+	permission: is.op
+	
+	trigger:
+		
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+		broadcast "&E&LI wood lake to be ruid but it would be mein!"
+
+		stop

@@ -1,0 +1,12 @@
+on death of villager:
+	chance of 70%:
+		drop 1 emerald at location of victim
+		stop
+	else:
+		stop
+on death of silverfish:
+	chance of 70%:
+		drop 1 diamond at location of victim
+		stop
+	else:
+		stop

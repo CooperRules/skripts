@@ -1,0 +1,59 @@
+command /wesker:
+	permission: is.cool
+	permission message: "&cno"
+	trigger:
+		create fake explosion at player's location
+		create fake explosion at player's location
+
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		create fake explosion at player's location
+		broadcast "&4&LALLAHUSNACKBAR!!!!!!"
+

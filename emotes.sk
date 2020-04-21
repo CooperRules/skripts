@@ -1,0 +1,788 @@
+
+
+command /emotes [<number>]:
+
+	trigger:
+
+		if arg 1 is not set:
+
+			message "&8&m--------------------"
+
+			message "       &b&lPlayer Emotes &7"
+
+			message " "
+
+			message "       &a/emotes (1 - 2)"
+
+			message "&8&m--------------------"
+
+			stop
+
+		if arg number is 1:
+
+			message "&8&m----------------------------------------"
+
+			message "&8 -> &b/love [player] &7Love is a strange thing"
+
+			message "&8 -> &b/hug [player] &7Hug someone to stay warm"
+
+			message "&8 -> &b/cry &7Depression hurts"
+
+			message "&8 -> &b/insult [player] &7Rooooood"
+
+			message "&8 -> &b/slap [player] &7Angry much?"
+
+			message "&8 -> &b/quack &7Quack Quack Quack"
+
+			message "&8 -> &b/moo &7moooooooooooooo"
+
+			message "&8 -> &b/happy &7Don't Worry be Happy"
+
+			message "&8&m----------------------------------------"
+
+				
+
+command /hug [<player>]:
+
+	permission: emote.hug
+
+	trigger:
+
+		if arg 1 is not set:
+
+			message "&8[&bEmote&8] &7this emote requires a player. &b/hug &a[player]" to player
+
+			stop
+
+		set {hug} to difference between {hug.%player%.lastused} and now
+
+		if {hug} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {hug.%player%.lastused} to now
+
+		if player does not have permission "emote.hug":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ejust gave &b%arg 1% &ea crushing hug"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &egave a warm hug to &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ehugged &b%arg 1% &eand refuses to let go"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eran towards &b%arg 1% &eand hugged them"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &etook hugging lessons from Gyarbear and practiced on &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ebegan to hug &b%arg 1% &eand fell asleep"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ehugged &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &edecided to hug &b%arg 1% &eto stay warm"
+
+			stop
+
+			
+
+command /quack:
+
+	permission: emote.quack
+
+	trigger:
+
+		set {quack} to difference between {quack.%player%.lastused} and now
+
+		if {quack} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {quack.%player%.lastused} to now
+
+		if player does not have permission "emote.quack":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eQuack Quack im a ducky"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eQuack, Quack, Quaaaaaaaaack!"
+
+			broadcast "&a ► &b%player% &eQucked like a duck, how weird"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eQuack Quack give me seeds"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eA duck walked up to the lemonade stand"
+
+			broadcast "&a ► &eand said to the man running the stand"
+
+			broadcast "&a ► &eHey, *bump bump bump* got any grapes?"
+
+			stop
+
+
+
+command /moo:
+
+	permission: emote.moo
+
+	trigger:
+
+		set {moo} to difference between {moo.%player%.lastused} and now
+
+		if {moo} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {moo.%player%.lastused} to now
+
+		if player does not have permission "emote.moo":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &emoo im a cow"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &eill milk you later ;)"
+
+			broadcast "&a ► &b%player% &e;););););)"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &eHoly cow :)"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &emoooooooooo"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &eHay hows it going?"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &eManure pretty good at this :)"
+
+			stop
+
+		chance of 30%:
+
+			broadcast "&a ► &b%player% &eI never heard about Herbivore :)"
+
+			stop
+
+
+
+command /cry:
+
+	permission: emote.cry
+
+	usage: &7Youre probably broken if you see this.	
+
+	trigger:
+
+		set {cry} to difference between {cry.%player%.lastused} and now
+
+		if {cry} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {cry.%player%.lastused} to now
+
+		if player does not have permission "emote.cry":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &emight need a tissue to wipe off the depression"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &estarted to cry"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis bathing in tears"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis bathing in tears"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &ehas water flowing from their eyes"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis so sad water started dripping from their eyes"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis crying"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &efeels water falling from their eyelids"
+
+			stop
+
+
+
+command /insult [<player>]:
+
+	permission: emote.insult
+
+	trigger:
+
+		if arg-1 is not set:
+
+			message "&8[&bEmote&8] &7this emote requires a player. &b/insult &a[player]" to player
+
+			stop
+
+		set {insult} to difference between {insult.%player%lastused} and now
+
+		if {insult} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {insult.%player%lastused} to now
+
+		if player does not have permission "emote.insult":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		if "%player%" = "%arg-1%":
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &ejust insulted theirself for some reason"
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &eis a nub"
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &elikes to be called a cornpuff"
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &ewanted to insult theirself, but was too dumb to think of an insult"
+
+				stop
+
+		if "%arg-1%" = "%arg-1%":
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &esays that &b%arg-1% &eis a cornpuff"
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &eIf &b%player's name% &ehad a dollar for every time &b%arg-1% &ewas smart, &b%player's name% &ewould be broke."
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%arg-1%&e, are you a cactus? Because &b%player's name% &ethinks that you're a prick."
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &eIf you want to know about mistakes, &b%player's name% &esays you should ask &b%arg-1%&e's parents."
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &esays that we'll never know &b%arg-1%&e's age, because they can't count that high."
+
+				stop
+
+			chance of 25%:
+
+				broadcast "&a ► &b%player's name% &ewanted to insult &b%arg-1%&e, but they wouldn't be able to understand"
+
+				stop
+
+				broadcast "&a ► &b%player's name% &ethinks that &b%arg-1% &eis a nub"
+
+
+
+command /happy:
+
+	permission: emote.happy
+
+	usage: &8[&aEmote&8] &7/happy
+
+	trigger:
+
+		set {happy} to difference between {happy.%player%.lastused} and now
+
+		if {happy} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {happy.%player%.lastused} to now
+
+		if player does not have permission "emote.happy":
+
+			message "&a ► &8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop 
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy they broke into a million smile emojis"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis happy"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eis so happy they died"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &efeels happy"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &elooks happy"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy they are gonna burst"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eseems to be happier then usual"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis getting happier"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy they didnt realize what they were eating and accidentally ate a 4 inch nail"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy they broke their face"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eis so happy their face got stuck"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ►  &b%player% &eseems happier today"
+
+			play sound "ENTITY_VILLAGER_YES" to player with volume 1 and pitch 10
+
+			stop
+
+
+
+command /slap [<player>]:
+
+	permission: emote.slap
+
+	usage: &8[&aEmote&8] &7/hug <player>
+
+	trigger:
+
+		if arg 1 is not set:
+
+			message "&8[&bEmote&8] &7this emote requires a player. &b/slap &a[player]" to player
+
+			stop
+
+		set {slap} to difference between {slap.%player%.lastused} and now
+
+		if {slap} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {slap.%player%.lastused} to now
+
+		if player does not have permission "emote.slap":
+
+			message "&a ► &8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop 
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ehow r00d"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1%"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &er00dly backhanded &b%arg 1%"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ejust slapped &b%arg 1%"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &e'accidentally' slapped &b%arg 1%"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &ejust left a red hand print on &b%arg 1%'s &eface"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &elighty slapped &b%arg 1% &eon the arm"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith a pool noodle"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith a flipper"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith an opened stapler"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith leftover chinese food"
+
+			push arg 1 upwards at speed 3
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith a fedora"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player% &eslapped &b%arg 1% &ewith an electric eel"
+
+			stop
+
+
+
+command /love [<player>]:
+
+	permission: emote.love	
+
+	trigger:
+
+		if arg 1 is not set:
+
+			message "&8[&bEmote&8] &7this emote requires a player. &b/love &a[player]" to player
+
+			stop
+
+		set {love} to difference between {love.%player%lastused} and now
+
+		if {love} is less than 5 seconds:
+
+			message "&8[&bCooldown&8] &7Wait a little while before using that &bEmote &7again!"
+
+			stop
+
+		set {love.%player%lastused} to now
+
+		if player does not have permission "emote.love":
+
+			message "&8[&aEmote&8] &7You need a higher rank to use that"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis in love with &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &ereally loves &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eloves &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis more than in love with &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &esorta loves &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &eis really in love with &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &ewould travel 3500 kilometers just to say 'I love you' to &b%arg 1%"
+
+			stop
+
+		chance of 25%:
+
+			broadcast "&a ► &b%player's name% &ewants to say 'I love you' in person to &b%arg 1%"
+
+			stop
+
+command /wamens:
+	trigger:
+	
+		broadcast "&ahonestly fr im not wamens, but i do be %player's name%"
+	
+		stop
+
+command /sam:
+	
+	permission: is.sam
+
+	trigger:
+
+
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+		broadcast "&4&lGANG VIOLENCE"
+
+
+
+		
+		stop
+		
+
+		

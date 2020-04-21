@@ -1,0 +1,25 @@
+command /calvin:
+	permission: is.calvin
+
+	trigger:
+
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		broadcast "&c&lMELON MONARCH"
+		stop

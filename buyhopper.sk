@@ -1,0 +1,37 @@
+command /buyhopper [<text>]:
+	permission: buy.hopper
+
+	trigger:
+		if arg-1 is not set:
+			message "&cYou need to choose a hopper type."
+			message "&bCrophopper        "
+			message "&bMobhopper        "
+			message "&bBreakhopper        "	
+			message "&bGrindhopper        "	
+	
+		if arg-1 is "mobhopper":
+			if player's balance is greater or equal to 5000000:
+
+				execute console command "/mfhoppers give %player% mobHopper"
+				remove 5000000 from player's balance
+			else:
+				message "&cYou do not have enough money."
+		if arg-1 is "grindhopper":
+			if player's balance is greater or equal to 10000000:
+				execute console command "mfhoppers give %player% grindHopper"
+				remove 10000000 from the player's balance
+			else: 
+				message "&cYou do not have enough money."
+		if arg-1 is "breakhopper":
+			if player's balance is greater than or equal to 2500000:
+				execute console command "mfhoppers give %player% breakHopper"
+				remove 2500000 from player's balance
+			else: 
+				message "&cYou do not have enough money."
+		if arg-1 is "crophopper":
+			if player's balance is greater or equal to 5000000:
+				execute console command "mfhoppers give %player% cropHopper"
+				remove 5000000 from player's balance
+			else:
+				message "&cYou do not have enough money."
+	

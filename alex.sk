@@ -1,0 +1,19 @@
+command /apemode:
+	permission: is.alex
+	permission message: "&cYou aren't alex."
+	trigger:
+		execute console command "/god x688"
+		execute console command "sudo x688 powertool thor"
+		message "&c&lAPE MODE ENABLED"
+		wait 120 seconds
+		execute console command "sudo x688 powertool"
+		execute console command "/god x688"
+		message "&c&lape mode disabled :("
+command /unape:
+	permission: is.alex
+	permission message: "&cYou aren't alex."
+	trigger:
+		execute console command "/god x688 off"
+		execute console command "sudo x688 powertool"
+		message "&c&lape mode disabled :("
+

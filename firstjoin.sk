@@ -1,0 +1,19 @@
+on first join:
+	set {someonejustjoined} to now
+	set {justjoinedname} to "%player's name%"
+	wait 10 seconds
+	
+	
+on chat:
+	if "%message%" contains "welcome":
+		if {someonejustjoined} was less than 10 seconds ago:
+			if {justwelcomed::%player%} is not set:
+				set {_i} to random integer from 20000 to 50000
+				add {_i} to player's balance
+				message "&7You got &a$%{_i}% &7for welcoming &e%{justjoinedname}%"
+				set {justwelcomed::%player%} to true
+				wait 10 seconds
+				delete {justwelcomed::%player%}			
+				
+on load:
+	delete {justwelcomed::*}
